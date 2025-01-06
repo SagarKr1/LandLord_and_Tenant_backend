@@ -4,7 +4,7 @@ const createProperty = require('../controller/AdminController/CreateProperty');
 
 const router = express.Router();
 
-const authMiddleware = require('../Auth/AdminAuth');
+const authMiddleware = require('../model/Auth/AdminAuth');
 
 router.get('/',(req,res)=>{
     res.send("<h1>This is Admin router</h1>")

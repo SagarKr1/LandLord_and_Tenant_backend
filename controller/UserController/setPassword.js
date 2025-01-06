@@ -2,8 +2,8 @@
 
 module.exports = async (req,res)=>{
     try{
-        const {email,otp} = req.body;
-        if(!email || !otp){
+        const {email,password} = req.body;
+        if(!email || !password){
             return res.json({
                 statusCode:404,
                 body:"data should not be empty"
@@ -11,7 +11,7 @@ module.exports = async (req,res)=>{
         }
         return res.json({
             statusCode: 200,
-            body: "successfully verified"
+            body: "password set"
         });
     }catch(e){
         return res.json({
